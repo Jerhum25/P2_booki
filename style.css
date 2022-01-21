@@ -3,10 +3,14 @@
     src: url(polices/Raleway-Regular.ttf)
 }
 
+
 #bloc_page{
-    margin: auto;
     font-family: raleway;
-    width: 70%;
+}
+
+.container {
+    width: 1270px;
+    margin: 0 auto;
 }
 
 header{
@@ -14,6 +18,13 @@ header{
     justify-content: space-between;
     font-size: 20px;
 }
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 header div{
     width: 120px;
 }
@@ -40,6 +51,7 @@ nav{
 nav a{
     text-decoration: none;
     color: #000;
+    margin-left: 15px;
 }
 
 nav a:hover{
@@ -75,21 +87,17 @@ nav a:hover{
 
 
 /*section recherche*/
-
-.recherche{
-    height: 30px;
-    width: 45%;
+.recherche .container{
     display: flex;
     border: 1px solid #F2F2F2;
     border-radius: 20px;
     align-items: center;
-    padding: 11px 0 11px 0;
     margin-bottom: 20px;
-    
+    width: fit-content;
 }
 
-.icone_rechercher{
-    display: none;
+.recherche{
+    margin-left: 0;
 }
 
 .recherche i{
@@ -99,41 +107,66 @@ nav a:hover{
 .recherche input{
     border: none;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .recherche a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #0065FC;
     color: #fff;
     padding: 15px;
-    border-radius: 0 15px 15px 0;
 }
 
-.map a{
+.recherche .map{
     width: 35px;
     text-align: center;
     background-color: #F2F2F2;
-    padding: 15px;
     border-radius: 15px 0 0 15px;
+    margin-left: 0;
+
 }
+
+.bouton_rechercher{
+    border-radius: 0 15px 15px 0;
+
+}
+.icone_rechercher{
+    display: none;
+}
+
 
 
 /*section filtres*/
 
+
+.wrap_filtre {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+}
+
+.filtres .container{
+    display: flex;
+    flex-direction: row;
+}
+
 .filtres{
-    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
+.nom_filtre {
+    margin-right: 2em;
+    margin-bottom: .7rem;
+}
+
 .filtres p{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -142,7 +175,7 @@ nav a:hover{
     align-items: center;
     border: 2px solid #F2F2F2;
     border-radius: 25px;
-    height: 49px;
+    height: 40px;
     text-decoration: none;
     color: #000;
 }
@@ -158,30 +191,31 @@ nav a:hover{
 
 .nom_filtre i{
     background-color: #DEEBFF;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 25px;
-    font-size: 25px;
+    font-size: 20px;
     color: #0065FC;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.info{
+.info .container{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.info img{
+.info i{
     width: 20px;
     margin-right: 10px;
+    color: #0065FC;
 }
 
 
 /*section hébergement*/
 
-.heb_popu{
+.heb_popu .container{
     display: flex;
     justify-content: space-between;
 }
@@ -207,7 +241,7 @@ nav a:hover{
 
 .vignettes{
     height: 200px;
-    width: 220px;
+    width: 230px;
     border-radius: 20px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -252,7 +286,7 @@ nav a:hover{
 }
 
  .vignettes_popu img{
-     width: 40%;
+     width: 45%;
      height: 100%;
      object-fit: cover;
      border-radius: 15px 0 0 15px;
@@ -265,7 +299,7 @@ nav a:hover{
     justify-content: space-around;
 }
 .vignettes_popu{
-    height: 150px;
+    height: 140px;
     display: flex;
     background-color: #FFF;
     border-radius: 15px;
@@ -379,6 +413,9 @@ nav a:hover{
 
 footer{
     background-color: #f2f2f2;
+}
+
+footer .container{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
@@ -388,35 +425,34 @@ footer{
 
 
 @media all and (max-width: 768px){
-   
-    #bloc_page{
+    .container{
         width: auto;
+        padding: 10px;
+        margin: auto;
     }
+
     #bloc_page p{
-        font-size: 10px;
+        font-size: 13px;
     }
     h1{
-        font-size: 15px;
+        font-size: 20px;
     }
     h2{
         font-size: 12px;
     }
 
-    header{
+    header .container{
         flex-direction: column;
     }
 
-    header div{
+    .logo{
         width: 80px;
+        margin:auto;
     }
 
-    .logo img{
-        width: 80px;
-    }
-
-    header div, header nav{
-        margin: auto;
+    header nav{
         top: 0;
+        font-size: 18px;
     }
 
     header a:hover{
@@ -427,12 +463,12 @@ footer{
 
 /*section recherche*/
 
-    .recherche{
-        height: 10px;
+    .recherche .container{
+        height: fit-content;
         border: 1px solid #F2F2F2;
         border-radius: 10px;
         align-items: center;
-        padding: 11px 0 11px 0;
+        padding: 0;
         margin-bottom: 20px;
     }
     
@@ -442,6 +478,7 @@ footer{
 
     .icone_rechercher{
         display: block;
+        border-radius: 0 10px 10px 0;
     }
 
     .icone_rechercher i{
@@ -456,33 +493,42 @@ footer{
         font-size: 15px;
     }
     
-    .map a{
+    .recherche .map{
         background-color: #F2F2F2;
+        width: 5px;
+        border-radius: 10px 0 0 10px;
     }
     
 
 /*section filtres*/
 
-    .filtres{
-        justify-content: space-between 10px;
+    .filtres .container{
+        flex-direction: column;
     }
 
+    .wrap_filtre{
+        margin: 0;
+    }
 
     .nom_filtre a{
-        height: 25px;
+        height: 30px;
     }
 
     .nom_filtre i{
-        font-size: 15px;
-        height: 25px;
-        width: 25px;
+        font-size: 18px;
+        height: 30px;
+        width: 30px;
     }
 
 
 /*section hébergement populaires*/
 
-    .heb_popu{
+    .heb_popu .container{
         flex-direction: column-reverse;
+    }
+
+    .populaire .container{
+        background-color: #F2F2F2;
     }
 
     .populaire{
@@ -490,12 +536,9 @@ footer{
         border-radius: 0;
         padding: 10px;
     }
-    .populaire .titre i{
-        top: 13px;
-    }
 
     .images_popu a{
-        box-shadow: #F2F2F2 5px 5px 5px, #F2F2F2 -5px 0 5px;
+        box-shadow: lightgray 5px 5px 5px, lightgrey -5px 5px 5px;
     }
 
     .vignettes_popu{
@@ -503,7 +546,7 @@ footer{
     }
 
     .vignettes_popu img{
-        width: 60%;
+        width: 40%;
     }
 
 
@@ -528,6 +571,7 @@ footer{
     .images_hebergements p{
         margin-top: 10px;
     }
+
  
 
 /*section activités*/
@@ -541,7 +585,7 @@ footer{
 
     .images_activites a{
         width: 100%;
-        height: 250px;
+        height: 200px;
         margin-bottom: 20px;
         box-shadow: #F2F2F2 5px 5px 5px, #F2F2F2 -5px 0 5px;
     }
@@ -554,7 +598,7 @@ footer{
 
 /*pied de page*/
 
-    footer{
+    footer .container{
         flex-direction: column;
     }
 }
