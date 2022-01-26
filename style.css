@@ -3,7 +3,6 @@
     src: url(polices/Raleway-Regular.ttf)
 }
 
-
 #bloc_page{
     font-family: raleway;
 }
@@ -94,10 +93,12 @@ nav a:hover{
     align-items: center;
     margin-bottom: 20px;
     width: fit-content;
+    margin-left: 0;
 }
 
 .recherche{
-    margin-left: 0;
+    width: 1270px;
+    margin: auto;    
 }
 
 .recherche i{
