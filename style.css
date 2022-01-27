@@ -33,10 +33,12 @@ header div{
 
 h2{
     font-size: 18px;
+    font-weight: bolder;
 }
 
 h1{
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bolder;
 }
 
 nav{
@@ -448,12 +450,25 @@ footer .container{
 
     .logo{
         width: 80px;
-        margin:auto;
+        margin:0 auto 30px auto;
     }
 
     header nav{
         top: 0;
         font-size: 18px;
+    }
+
+    header .container{
+        width: 100%;
+    }
+
+    nav{
+        width: auto;
+        justify-content: space-around;
+    }
+
+    nav a{
+        margin-left: 0%;
     }
 
     header a:hover{
@@ -571,6 +586,10 @@ footer .container{
     }
     .images_hebergements p{
         margin-top: 10px;
+    }
+
+    .heb_popu h2{
+        font-size: 18px;
     }
 
  
