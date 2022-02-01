@@ -24,6 +24,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
@@ -44,11 +45,11 @@ table {
 }
 
 
-@font-face {
+/* @font-face {
     font-family:raleway ;
-    src: url(polices/Raleway-Regular.ttf)
+    src: url(polices/Raleway-Regular.ttf);
 }
-
+ */
 #bloc_page{
     font-family: raleway;
 }
@@ -90,20 +91,23 @@ h1{
 nav{
     width: 240px;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 98px;
+
 }
 
 nav a{
     text-decoration: none;
     color: #000;
     margin-left: 15px;
+    height: 90px;
+    display: flex;
+    align-items: center;
 }
 
 nav a:hover{
-    color: #0065FC;
-    text-decoration: overline 2px;
+    border-top: 3px solid #0065FC;
 }
 
 .description_site p{
@@ -190,7 +194,6 @@ nav a:hover{
 
 /*section filtres*/
 
-
 .wrap_filtre {
     display: flex;
     flex-wrap: wrap;
@@ -275,14 +278,8 @@ nav a:hover{
     padding: 30px;
     border-radius: 20px;
 }
-/* .images_hebergements{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
- */
 
- .images_hebergements{
+.images_hebergements{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -327,10 +324,17 @@ grid-area: f;
     background-color: #fff;
     margin-bottom: 20px;
     padding: 5px;
-    
 }
 
 .hebergements p, .populaire p{
+    margin: 0;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin: 15px 0 10px 15px
+}
+
+.populaire p{
     margin: 0;
     font-size: 12px;
     margin-left: 15px;
@@ -396,21 +400,13 @@ grid-area: f;
     margin-top: 40px;
 }
 
-/* .images_activites{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 350px;
-} */
-
 .images_activites{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "a b c d"
-        "a e c f";
+        "a b d e"
+        "a c d f";
 }
 
 .images_activites a:nth-child(1) {
@@ -421,30 +417,27 @@ grid-area: f;
 .images_activites a:nth-child(2) {
     grid-area: b;
     margin: 0 20px 20px 20px;
-
 }
 
 .images_activites a:nth-child(3) {
-    grid-area: e;
+    grid-area: c;
     margin: 20px 20px 0 20px;
-
 }
 
 .images_activites a:nth-child(4) {
-    grid-area: c;
-    margin: 0 20px;
+    grid-area: d;
+    margin: 0 20px 0 20px;
 }
 
 .images_activites a:nth-child(5) {
-    grid-area: d;
-    margin: 0 0 0 20px;
+    grid-area: e;
+    margin: 0 0 20px 20px;
 }
 
 .images_activites a:nth-child(6) {
     grid-area: f;
-    margin: 0 0 0 20px;
+    margin: -18px 0 0 20px;
 }
-
 
 .images_activites a{
     display: flex;
@@ -487,62 +480,26 @@ grid-area: f;
     height: 470px;
 }
 
-/* .vignette_activite1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- */
 .vignette_activite2{
     height: 250px;
 }
 
-/* .vignette_activite2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- */
 .vignette_activite3{
     height: 180px;
 }
 
-/* .vignette_activite3 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- */
 .vignette_activite4{
     height: 470px;
 }
 
-/* .vignette_activite4 img{
-    height: 100%;
-    width: 220%;
-    object-fit: cover;
-}
- */
 .vignette_activite5{
     height: 215px;
 }
 
-/* .vignette_activite5 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- */
  .vignette_activite6{
     height: 215px;
     margin-top: 120px;
 }
-
-/* .vignette_activite6 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
 
 
 /*pied de page*/
@@ -553,18 +510,31 @@ footer{
 
 footer .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-top: 40px;
-    padding-right: 10%;
+    padding: 30px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px){
+footer .container div{
+    margin-right: 200px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1270px){
     .container {
-        width: 1270px;
+        width: 768px;
         margin: 0 auto;
+    }
+
+    .recherche{
+        width: 768px;
+        margin: auto;
     }
     .heb_popu .container{
         flex-direction: column;
+    }
+
+    .hebergements{
+        width:auto;
     }
 
     .vignettes{
@@ -608,7 +578,8 @@ footer .container{
     }
 
     .populaire{
-        width: 768px;
+        width: auto;
+        margin-top: 30px;
     }
     .images_popu{
         width: auto;
@@ -619,15 +590,16 @@ footer .container{
 
     .vignettes_popu{
         width: 220px;
+        height: 100px;
     }
     .vignettes_popu img{
         width: 30%;
     }   
     .activites{
-        width: 768px;
+        width: auto;
     }
     .images_activites{
-        width: 768px;
+        width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -642,32 +614,32 @@ footer .container{
     }
     .images_activites a:nth-child(1) {
         grid-area: a;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 0px;
     }
     
     .images_activites a:nth-child(2) {
         grid-area: b;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 0px;
     }
     
     .images_activites a:nth-child(3) {
         grid-area: e;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 0px;
     }
     
     .images_activites a:nth-child(4) {
         grid-area: c;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 20px;
     }
     
     .images_activites a:nth-child(5) {
         grid-area: d;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 20px;
     }
     
     .images_activites a:nth-child(6) {
         grid-area: f;
-        margin: 0px 20px 20px 20px
+        margin: 0px 20px 20px 20px;
     }
     
 
@@ -683,7 +655,9 @@ footer .container{
 }
 
 @media only screen and (max-width: 767px){
-
+    .container{
+        width: auto;
+    }
     #bloc_page p{
         font-size: 13px;
     }
@@ -700,7 +674,11 @@ footer .container{
 
     .logo{
         width: 80px;
-        margin:0 auto 30px auto;
+        margin:0 auto 0 auto;
+    }
+
+    header{
+        display: block;align-items: flex-start;
     }
 
     header nav{
@@ -708,23 +686,27 @@ footer .container{
         font-size: 18px;
     }
 
-    header .container{
-        width: 100%;
-    }
-
     nav{
         width: auto;
         justify-content: space-around;
+        height: 40px;
+        text-align: center;
     }
 
     nav a{
-        margin-left: 0%;
+        margin-left: 0;
+        width: 50%;
+        height: 40px;
+        justify-content: center;
     }
 
     header a:hover{
-        text-decoration: 2px underline blue;
+        border-bottom: 2px solid #0065FC;
+        border-top: none;
         color: #000;
     }
+
+
 
 /*section recherche*/
 
@@ -814,15 +796,14 @@ footer .container{
 
     .hebergements{
         width: auto;
+        padding: 10px;
         background-color: #FFF;
     }
 
     .images_hebergements a{
-        width: 100%;
         padding: 5px;
         box-shadow: #F2F2F2 5px 5px 5px, #F2F2F2 -5px 0 5px;
     }
-
 
     .images_hebergements{
         display: grid;
@@ -833,36 +814,36 @@ footer .container{
   
     .images_hebergements a:nth-child(1) {
         grid-area: a;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
         
     .images_hebergements a:nth-child(2) {
         grid-area: b;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
         
     .images_hebergements a:nth-child(3) {
         grid-area: e;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
         
     .images_hebergements a:nth-child(4) {
         grid-area: c;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
         
     .images_hebergements a:nth-child(5) {
         grid-area: d;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
         
     .images_hebergements a:nth-child(6) {
         grid-area: f;
-        margin: 10px auto;
+        margin: 0 0 20px 0;
     }
 
     .images_hebergements a{
-        width: 100%;
+        width: auto;
         padding: 5px;
         box-shadow: #F2F2F2 5px 5px 5px, #F2F2F2 -5px 0 5px;
     }
@@ -879,16 +860,49 @@ footer .container{
     }
 
 /*section activités*/
+    .activites{
+        padding: 10px;
+    }
     .images_activites{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "a" "b" "c" "d" "e" "f";
     }
 
+    .images_activites a:nth-child(1) {
+        grid-area: a;
+        margin: 0 0 20px 0;
+    }
+    
+    .images_activites a:nth-child(2) {
+        grid-area: b;
+        margin: 0 0 20px 0;
+    }
+    
+    .images_activites a:nth-child(3) {
+        grid-area: e;
+        margin: 0 0 20px 0;
+    }
+    
+    .images_activites a:nth-child(4) {
+        grid-area: c;
+        margin: 0 0 20px 0;
+    }
+    
+    .images_activites a:nth-child(5) {
+        grid-area: d;
+        margin: 0 0 20px 0;
+    }
+    
+    .images_activites a:nth-child(6) {
+        grid-area: f;
+        margin: 0 0 20px 0;
+    }
+
     .images_activites a{
-        margin: 10px auto;
-        width: 320px;
+        margin: 10px;
+        width: auto;
         height: 200px;
     }
 
@@ -902,5 +916,8 @@ footer .container{
     footer .container{
         flex-direction: column;
         padding-left: 20px;
+    }
+    footer .container div{
+        width: 100%;
     }
 }
