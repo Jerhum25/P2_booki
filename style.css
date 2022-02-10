@@ -45,11 +45,8 @@ table {
 }
 
 
-/* @font-face {
-    font-family:raleway ;
-    src: url(polices/Raleway-Regular.ttf);
-}
- */
+
+/* Début du code */
 #bloc_page{
     font-family: raleway;
 }
@@ -59,6 +56,8 @@ table {
     margin: 0 auto;
 }
 
+
+/* Header */
 header{
     display: flex;
     justify-content: space-between;
@@ -123,17 +122,6 @@ nav a:hover{
     display: inline-block;
     padding-left: 15px;
     height: 15px;
-}
-
-.fa-star{
-    color: #0065FC;
-    font-size: 10px;
-    margin-top: 0;
-}
-
-.fa-star.grey{
-    color: #F2F2F2;
-    margin-top: 0;
 }
 
 
@@ -253,6 +241,9 @@ nav a:hover{
     justify-content: center;
 }
 
+
+
+/* Section info */
 .info .container{
     display: flex;
     align-items: center;
@@ -265,7 +256,19 @@ nav a:hover{
 }
 
 
+
 /*section hébergement*/
+.fa-star{
+    color: #0065FC;
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.fa-star.grey{
+    color: #F2F2F2;
+    margin-top: 0;
+}
+
 
 .heb_popu .container{
     display: flex;
@@ -519,20 +522,46 @@ footer .container div{
     margin-right: 200px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1270px){
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
     .container {
         width: 768px;
         margin: 0 auto;
     }
 
+/* Section recherche */
     .recherche{
         width: 768px;
         margin: auto;
     }
+
+/* Section hébergements poupulaires */
     .heb_popu .container{
         flex-direction: column;
     }
+    .populaire{
+        width: auto;
+        margin-top: 30px;
+    }
+    .images_popu{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .vignettes_popu{
+        width: 220px;
+        height: 100px;
+    }
+    .vignettes_popu img{
+        width: 30%;
+    }   
+
+
+
+/* Section hébergements */
     .hebergements{
         width:auto;
     }
@@ -577,24 +606,8 @@ footer .container div{
         margin: 10px auto;
     }
 
-    .populaire{
-        width: auto;
-        margin-top: 30px;
-    }
-    .images_popu{
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .vignettes_popu{
-        width: 220px;
-        height: 100px;
-    }
-    .vignettes_popu img{
-        width: 30%;
-    }   
+/* Section activités */
     .activites{
         width: auto;
     }
@@ -642,12 +655,13 @@ footer .container div{
         margin: 0px 20px 20px 20px;
     }
     
-
     .images_activites a{
         height: 200px;
         width: 350px;
     }
 
+
+/* Pied de page */
     footer .container{
         flex-direction: column;
     }
@@ -668,6 +682,8 @@ footer .container div{
         font-size: 12px;
     }
 
+
+/* Section header */
     header .container{
         flex-direction: column;
     }
@@ -766,7 +782,7 @@ footer .container div{
         width: 30px;
     }
 
-/*section hébergement populaires*/
+/*section hébergements populaires*/
 
     .heb_popu .container{
         flex-direction: column-reverse;
@@ -794,6 +810,12 @@ footer .container div{
         width: 40%;
     }
 
+    .heb_popu h2{
+        font-size: 18px;
+    }
+
+
+/* Section hébergements */
     .hebergements{
         width: auto;
         padding: 10px;
@@ -855,9 +877,6 @@ footer .container div{
         margin-top: 10px;
     }
 
-    .heb_popu h2{
-        font-size: 18px;
-    }
 
 /*section activités*/
     .activites{
