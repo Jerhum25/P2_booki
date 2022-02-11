@@ -47,6 +47,10 @@ table {
 
 
 /* Début du code */
+html{
+    scroll-behavior:smooth;
+}
+
 #bloc_page{
     font-family: raleway;
 }
@@ -150,6 +154,7 @@ nav a:hover{
     padding-left: 10px;
     font-size: 16px;
     font-weight: bold;
+    outline: none;
 }
 
 .recherche a{
@@ -547,16 +552,17 @@ footer .container div{
     .images_popu{
         width: auto;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
     }
 
     .vignettes_popu{
-        width: 220px;
+        width: 45%;
         height: 100px;
     }
     .vignettes_popu img{
-        width: 30%;
+        width: 40%;
     }   
 
 
@@ -686,11 +692,12 @@ footer .container div{
 /* Section header */
     header .container{
         flex-direction: column;
+        
     }
 
     .logo{
         width: 80px;
-        margin:0 auto 0 auto;
+        margin:0 auto 1.5rem auto;
     }
 
     header{
@@ -714,6 +721,7 @@ footer .container div{
         width: 50%;
         height: 40px;
         justify-content: center;
+        border-bottom: 2px solid #f2f2f2;
     }
 
     header a:hover{
@@ -722,6 +730,11 @@ footer .container div{
         color: #000;
     }
 
+    .description_site{
+        padding: 0 5px;
+        margin-top: 1.5rem;
+
+    }
 
 
 /*section recherche*/
@@ -731,7 +744,7 @@ footer .container div{
         border: 1px solid #F2F2F2;
         border-radius: 10px;
         align-items: center;
-        padding: 0;
+        padding: 0 5px;
         margin-bottom: 20px;
     }
 
@@ -766,6 +779,7 @@ footer .container div{
 
     .filtres .container{
         flex-direction: column;
+        padding: 0 5px;
     }
 
     .wrap_filtre{
@@ -780,6 +794,12 @@ footer .container div{
         font-size: 18px;
         height: 30px;
         width: 30px;
+    }
+
+/* Section info */
+    .info .container{
+        padding: 0 5px;
+
     }
 
 /*section hébergements populaires*/
@@ -938,5 +958,8 @@ footer .container div{
     }
     footer .container div{
         width: 100%;
+    }
+    footer h2{
+        font-size: 15px;
     }
 }
