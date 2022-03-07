@@ -52,12 +52,22 @@ html{
 }
 
 #bloc_page{
-    font-family: raleway;
+    font-family: 'Raleway';
 }
 
 .container {
     width: 1270px;
     margin: 0 auto;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: bolder;
 }
 
 
@@ -81,15 +91,6 @@ header div{
     width: 120px;
 }
 
-h2{
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-h1{
-    font-size: 22px;
-    font-weight: bolder;
-}
 
 nav{
     width: 240px;
@@ -184,7 +185,6 @@ nav a:hover{
 
 
 /*section filtres*/
-
 .wrap_filtre {
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +243,6 @@ nav a:hover{
     align-items: center;
     justify-content: center;
 }
-
 
 
 /* Section info */
@@ -368,7 +367,6 @@ grid-area: f;
 
 
 /*section hébergement populaires*/
-
 .populaire{
     background-color: #F2F2F2;
     width: 25%;
@@ -378,12 +376,11 @@ grid-area: f;
 .populaire .titre{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .populaire .titre i{
     font-size: 20px;
-    position: relative;
-    top: 23px;
 }
 
  .vignettes_popu img{
@@ -465,7 +462,7 @@ grid-area: f;
 
 .images_activites p{ 
     font-size: 12px ;
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 .activity_image_bg img{
@@ -693,7 +690,7 @@ footer .container div{
         font-size: 20px;
     }
     h2{
-        font-size: 12px;
+        font-size: 18px;
     }
 
 
