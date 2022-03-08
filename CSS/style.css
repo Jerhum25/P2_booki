@@ -283,10 +283,6 @@ nav a:hover{
     justify-content: space-between;
 }
 
-.heb_popu .heb_popu_titre{
-    font-size: 0;
-}
-
 .hebergements{
     width: 60%;
     background-color: #F2F2F2;
@@ -534,7 +530,7 @@ footer .container div{
 
 
 
-@media only screen and (min-width: 768px) and (max-width: 992px){
+@media only screen and (min-width: 769px) and (max-width: 992px){
     .container {
         width: 768px;
         margin: 0 auto;
@@ -679,7 +675,7 @@ footer .container div{
     
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
     .container{
         width: auto;
     }
